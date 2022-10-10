@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: white;
+    }
+
+    .header {
+      overflow: hidden;
+      padding: 20px 10px;
+      display: inline-block;
+      padding: 5.5rem;
+      margin-left: 0;
+    }
+
+    input {
+      width: 30%;
+      padding: 12px;
+      border: 3px solid hsl(0, 10%, 4%);
+      border-radius: 30px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      background-color: white;
+      color: black;
+    }
+
+    #table2 {
+      text-align: center;
+      background-color: white;
+      display: none;
+      border: none;
+      border-collapse: collapse;
+      width: 100%;
+      overflow: scroll;
+    }
+
+    .table-dark {
+
+      background-color: rgb(255, 215, 0);
+      color: white;
+      padding-left: 10px;
+
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    table,
+    th,
+    td {
+
+      border: 2px solid black;
+      display: flexbox;
+      font-size: 20px;
+    }
+
+    #submit {
+      background-color: black;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      border-radius: 30px;
+      border: 3px solid black;
+      color: white;
+    }
+
+    .left {
+      margin-top: 0px;
+    }
+
+    .top {
+      background-color: gold;
+      width: 100%;
+      position: static;
+    }
+
+    .right {
+      float: right;
+      width: 20%;
+      height: 40%;
+      padding-top: 40px;
+    }
+
+    #right1 {
+      float: right;
+    }
+
+    #right {
+      float: right;
+      margin-top: 0px;
+
+    }
+
+    #table_body {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    footer {
+      background-color: black;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      width: 100%;
+      position: sticky;
+      padding: 5px;
+
+    }
+    @media screen and (max-width: 1200px) {
+      body {
+        background-color: white;
+      }
+
+      #submit {
+        background-color: black;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        border-radius: 30px;
+        border: 3px solid black;
+        color: white;
+      }
+
+      .header {
+        width: 100%;
+      }
+
+      #table2 {
+        text-align: center;
+        background-color: white;
+        display: none;
+        border-collapse: collapse;
+        overflow: scroll;
+
+      }
+
+      .table-dark {
+        border-right: 25%;
+        background-color: rgb(255, 215, 0);
+        color: white;
+        padding-left: 10px;
+        border-collapse: collapse;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+
+      .left {
+        margin-top: 0px;
+      }
+
+      .top {
+        background-color: gold;
+        width: 100%;
+        position: static;
+      }
+
+      .right {
+        float: right;
+        width: 20%;
+        height: 40%;
+        padding-top: 40px;
+      }
+
+      #right1 {
+        float: right;
+      }
+
+      #right {
+        float: right;
+        margin-top: 0px;
+
+      }
+
+      #table_body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      footer {
+        background-color: black;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        width: 100%;
+        position: sticky;
+        padding: 10px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="top">
+        <div class="left">
+          <img src="https://logos-download.com/wp-content/uploads/2019/07/India_Post_Logo.png"
+            style="width:20%;height:20%;">
+          <img id="right1" src="indlogo.jpg" style="width:8.5%;height:5%;padding-top:15px;padding-bottom:30px;">
+          <img id="right1"
+            src="https://e7.pngegg.com/pngimages/141/687/png-clipart-lion-capital-of-ashoka-sarnath-state-emblem-of-india-national-symbols-of-india-government-of-india-symbol-miscellaneous-mammal-thumbnail.png"
+            style="width:5%;height:5%;padding-top:15px;">
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <br>
+  <br>
+  <br>
+  <center>
+    <div class="container">
+      <form>
+        <div>
+          <label for="text"><b><i>EnterPinCode</i>:</b></label>
+          <input type="text" class="form-control" id="pincode" maxlength="6" /><br>
+          <button id="submit" type="button" onclick="mypincode()"> SUBMIT
+          </button>
+        </div>
+      </form>
+      <br />
+    </div>
+
+  </center>
+
+  <div class="container">
+
+    <table id="table2">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">BranchType</th>
+          <th scope="col">DeliveryStatus</th>
+          <th scope="col">Circle</th>
+          <th scope="col">District</th>
+          <th scope="col">Division</th>
+          <th scope="col">Region</th>
+          <th scope="col">State</th>
+          <th scope="col">Country</th>
+        </tr>
+      </thead>
+      <tbody id="table_body">
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+
+    function mypincode() {
+      var pincode = document.getElementById("pincode").value;
+      var z = document.getElementById("pincode").value;
+      //if((!z.match(/^\d+/))||((fName.length >2)||((fName.length < 2)) )){
+      if ((!/^[0-9]+$/.test(z)) || ((pincode.length > 6) || ((pincode.length < 6)))) {
+
+        alert(" Please Enter valid pincode");
+      }
+
+      fetch("https://api.postalpincode.in/pincode/" + pincode)
+        .then((data) => {
+          //console.log(data);
+          return data.json(); //converted to json formate
+        })
+        .then((objectData) => {
+          console.log(objectData[0].PostOffice);
+          var postOfficedata = objectData[0].PostOffice;
+          let tableData = "";
+          postOfficedata.map((values) => {
+            tableData += `<tr>
+<td>${values.Name}</td>
+<td>${values.Description}</td>
+<td>${values.BranchType}</td>
+<td>${values.DeliveryStatus}</td>
+<td>${values.Circle}</td>
+<td>${values.District}</td>
+<td>${values.Division}</td>
+<td>${values.Region}</td>
+<td>${values.State}</td>
+<td>${values.Country}</td>
+</tr>`;
+          });
+          document.getElementById("table_body").innerHTML = tableData;
+          document.getElementById("table2").style = "display:block";
+        })
+        .catch((error) => alert("Cant fetch data"));
+    }
+  </script><br>
+  <br>
+  <br>
+  <footer>
+    <p><b>© Copyright 2022 Srichandana Batta</b></p>
+  </footer>
+</body>
+
+</html>
